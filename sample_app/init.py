@@ -11,6 +11,7 @@ def main():
         raise ImportError("Couldn't import Django.") from exc
 
     execute_from_command_line(["manage.py", "makemigrations"])
+    execute_from_command_line(["manage.py", "makemigrations", "receipts"])
     execute_from_command_line(["manage.py", "migrate"])
     sample_data.generate()
 
